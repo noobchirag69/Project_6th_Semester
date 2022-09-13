@@ -251,8 +251,10 @@ def runAlfred():
     elif 'play music' in query:
         music_dir = '/home/noobchirag69/Music'
         songs = os.listdir(music_dir)
-        num = random.randint(0, 12)
+        num = random.randint(0, len(songs))
         opener = "open" if sys.platform == "darwin" else "xdg-open"
+        print('Playing music from the Music directory...')
+        speak('Playing music from the Music directory...')
         subprocess.call([opener, os.path.join(music_dir, songs[num])])
 
     # Time using DateTime
