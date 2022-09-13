@@ -74,7 +74,7 @@ def note(text):
     file_name = str(date).replace(":", "-") + "-note.txt"
     with open(file_name, "w") as f:
         f.write(text)
-    subprocess.Popen(["/usr/bin/gedit", file_name])
+    subprocess.Popen(["/usr/bin/mousepad", file_name])
 
 
 # Game playing Function
