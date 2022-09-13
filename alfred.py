@@ -222,14 +222,8 @@ def runAlfred():
     elif 'open map' in query or 'open maps' in query:
         web.open('maps.google.com')
 
-    elif 'open movies' in query or 'open movie' in query:
-        web.open('watchserieshd.bz/home')
-
     elif 'open code' in query:
         web.open('onlinegdb.com')
-
-    elif 'open data bases' in query:
-        web.open('localhost/phpmyadmin')
 
     # Locate a place in Google Maps using WebBrowser
     elif "where is" in query:
@@ -255,7 +249,7 @@ def runAlfred():
 
     # OS actions
     elif 'play music' in query:
-        music_dir = '/home/chirag/Music'
+        music_dir = '/home/noobchirag69/Music'
         songs = os.listdir(music_dir)
         num = random.randint(0, 12)
         opener = "open" if sys.platform == "darwin" else "xdg-open"
@@ -278,7 +272,7 @@ def runAlfred():
         response = requests.get(url)
 
         soup = BeautifulSoup(response.text, 'html.parser')
-        headlines = soup.find('body').find_all('h3')[:11]
+        headlines = soup.find('body').find_all('h3')[:6]
         unwanted = ['BBC World News TV', 'BBC World Service Radio',
             'News daily newsletter', 'Mobile app', 'Get in touch']
         
